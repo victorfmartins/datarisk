@@ -1,0 +1,288 @@
+Best parameters for LogisticRegression: OrderedDict([('C', 214533.0330469755), ('solver', 'lbfgs')])
+Classifier: LogisticRegression
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1 Score: 1.0
+ROC AUC: 1.0
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 20), ('min_samples_split', 9)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.2676238432226456
+Precision: 0.03398013183548417
+Recall: 0.505524861878453
+F1 Score: 0.06367986080904742
+ROC AUC: 0.3804105843889831
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 26), ('min_samples_split', 9)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9503266194882961
+Precision: 0.4817073170731707
+Recall: 0.10911602209944751
+F1 Score: 0.17792792792792794
+ROC AUC: 0.5515162131682466
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 316552.512363626), ('loss', 'hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9893168209036473
+Precision: 0.8225255972696246
+Recall: 0.9986187845303868
+F1 Score: 0.9020586400499064
+ROC AUC: 0.9937267985062469
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 3748.5980651042937), ('solver', 'liblinear')])
+Classifier: LogisticRegression
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1 Score: 1.0
+ROC AUC: 1.0
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 49), ('min_samples_split', 4)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.5751905280348394
+Precision: 0.036452208970267096
+Recall: 0.29972375690607733
+F1 Score: 0.06499925116070092
+ROC AUC: 0.44459420023946866
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 31), ('min_samples_split', 7)])
+Classifier: RandomForestClassifier
+Accuracy: 0.896842678279804
+Precision: 0.07510729613733906
+Recall: 0.09668508287292818
+F1 Score: 0.08454106280193238
+ROC AUC: 0.517495132332542
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 39110.029349233555), ('loss', 'hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9893168209036473
+Precision: 0.8225255972696246
+Recall: 0.9986187845303868
+F1 Score: 0.9020586400499064
+ROC AUC: 0.9937267985062469
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 18316.184624609556), ('solver', 'lbfgs')])
+Classifier: LogisticRegression
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1 Score: 1.0
+ROC AUC: 1.0
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'entropy'), ('max_depth', 1), ('min_samples_split', 2)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.9253538377789875
+Precision: 0.3155291790306627
+Recall: 0.44060773480662985
+F1 Score: 0.3677233429394812
+ROC AUC: 0.6955400540623472
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 27), ('min_samples_split', 10)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9339275993467611
+Precision: 0.23779193205944799
+Recall: 0.15469613259668508
+F1 Score: 0.18744769874476988
+ROC AUC: 0.5645009434812799
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 3853.443603232315), ('loss', 'hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9893168209036473
+Precision: 0.8225255972696246
+Recall: 0.9986187845303868
+F1 Score: 0.9020586400499064
+ROC AUC: 0.9937267985062469
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 411117.93425854994), ('solver', 'liblinear')])
+Classifier: LogisticRegression
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1 Score: 1.0
+ROC AUC: 1.0
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 44), ('min_samples_split', 4)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.4195699510070768
+Precision: 0.034581445265919386
+Recall: 0.4005524861878453
+F1 Score: 0.06366630076838638
+ROC AUC: 0.41055394134757284
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 37), ('min_samples_split', 4)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9424333151878062
+Precision: 0.20673076923076922
+Recall: 0.05939226519337017
+F1 Score: 0.09227467811158799
+ROC AUC: 0.5237914661208763
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 979414.1834992251), ('loss', 'hinge')])
+Classifier: LinearSVC
+Accuracy: 0.985506260206859
+Precision: 1.0
+Recall: 0.7058011049723757
+F1 Score: 0.8275303643724696
+ROC AUC: 0.8529005524861879
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 0.6284739692931335), ('solver', 'newton-cg')])
+Classifier: LogisticRegression
+Accuracy: 0.9650925421883506
+Precision: 0.5913419913419914
+Recall: 0.9433701657458563
+F1 Score: 0.7269824374667377
+ROC AUC: 0.9547941581663724
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 41), ('min_samples_split', 3)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.800830157866086
+Precision: 0.056383407168747485
+Recall: 0.19337016574585636
+F1 Score: 0.08730901153726224
+ROC AUC: 0.5128388189164438
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 26), ('min_samples_split', 5)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9216113228089275
+Precision: 0.09003831417624521
+Recall: 0.0649171270718232
+F1 Score: 0.0754414125200642
+ROC AUC: 0.5154602812570681
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 504.31482194600875), ('loss', 'squared_hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9892487751769189
+Precision: 1.0
+Recall: 0.7817679558011049
+F1 Score: 0.8775193798449613
+ROC AUC: 0.8908839779005524
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 7.255092866872547), ('solver', 'lbfgs')])
+Classifier: LogisticRegression
+Accuracy: 0.9861186717474143
+Precision: 0.7801724137931034
+Recall: 1.0
+F1 Score: 0.8765133171912832
+ROC AUC: 0.9926996850844546
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 3), ('min_samples_split', 8)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.9084104518236255
+Precision: 0.2781740370898716
+Recall: 0.5386740331491713
+F1 Score: 0.36688617121354655
+ROC AUC: 0.7331217288562919
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 38), ('min_samples_split', 3)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9489657049537289
+Precision: 0.37254901960784315
+Recall: 0.052486187845303865
+F1 Score: 0.0920096852300242
+ROC AUC: 0.5239527990471866
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 348908.8460934382), ('loss', 'squared_hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9967338051170387
+Precision: 0.9694444444444444
+Recall: 0.9640883977900553
+F1 Score: 0.9667590027700831
+ROC AUC: 0.9812569100315865
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 355849.24841294246), ('solver', 'lbfgs')])
+Classifier: LogisticRegression
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1 Score: 1.0
+ROC AUC: 1.0
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 41), ('min_samples_split', 8)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.9184131736526946
+Precision: 0.12832550860719874
+Recall: 0.1132596685082873
+F1 Score: 0.12032281731474687
+ROC AUC: 0.5366971116661106
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 42), ('min_samples_split', 3)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9514833968426782
+Precision: 0.7037037037037037
+Recall: 0.026243093922651933
+F1 Score: 0.05059920106524634
+ROC AUC: 0.5128352601018927
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 263.7235019741442), ('loss', 'hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9955770277626566
+Precision: 0.9700427960057061
+Recall: 0.9392265193370166
+F1 Score: 0.9543859649122807
+ROC AUC: 0.9688617566624963
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 49289.81297498661), ('solver', 'liblinear')])
+Classifier: LogisticRegression
+Accuracy: 1.0
+Precision: 1.0
+Recall: 1.0
+F1 Score: 1.0
+ROC AUC: 1.0
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'gini'), ('max_depth', 3), ('min_samples_split', 9)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.9116766467065869
+Precision: 0.29112081513828236
+Recall: 0.5524861878453039
+F1 Score: 0.3813155386081983
+ROC AUC: 0.7413876687866656
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 43), ('min_samples_split', 9)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9467882416984214
+Precision: 0.37916666666666665
+Recall: 0.12569060773480664
+F1 Score: 0.1887966804979253
+ROC AUC: 0.5575132111104608
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 3340.032763596029), ('loss', 'squared_hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9859825802939576
+Precision: 0.7784946236559139
+Recall: 1.0
+F1 Score: 0.875453446191052
+ROC AUC: 0.9926281133695963
+------------------------
+Best parameters for LogisticRegression: OrderedDict([('C', 1.7271028222200808), ('solver', 'newton-cg')])
+Classifier: LogisticRegression
+Accuracy: 0.9733260751224823
+Precision: 0.6571969696969697
+Recall: 0.9585635359116023
+F1 Score: 0.7797752808988764
+ROC AUC: 0.9663272875664509
+------------------------
+Best parameters for DecisionTreeClassifier: OrderedDict([('criterion', 'entropy'), ('max_depth', 3), ('min_samples_split', 3)])
+Classifier: DecisionTreeClassifier
+Accuracy: 0.8925557974959173
+Precision: 0.24538415723645027
+Recall: 0.569060773480663
+F1 Score: 0.3429047024552642
+ROC AUC: 0.739189705377606
+------------------------
+Best parameters for RandomForestClassifier: OrderedDict([('max_depth', 50), ('min_samples_split', 4)])
+Classifier: RandomForestClassifier
+Accuracy: 0.9506668481219379
+Precision: 0.4936708860759494
+Recall: 0.05386740331491713
+F1 Score: 0.09713574097135742
+ROC AUC: 0.5255022673602928
+------------------------
+Best parameters for LinearSVC: OrderedDict([('C', 747.5273802799217), ('loss', 'squared_hinge')])
+Classifier: LinearSVC
+Accuracy: 0.9937397931409907
+Precision: 1.0
+Recall: 0.8729281767955801
+F1 Score: 0.9321533923303835
+ROC AUC: 0.93646408839779
+------------------------
