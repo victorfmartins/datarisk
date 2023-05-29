@@ -1,65 +1,86 @@
-# README - Projeto Case Nelogica - Victor Martins (Atualizado)
+# README - Fraud Prediction
 
-Este arquivo README contém informações sobre como configurar e executar o projeto utilizando Docker Compose e um script para facilitar a execução.
+## Overview
 
-## Requisitos
+This repository contains a predictive model that estimates the probability of a customer defaulting on a debt for each new credit request made by a recurring client. The model is fed with data from three different databases, each containing specific details about the clients and their respective transactions.
 
-- Docker
-- Docker Compose
+## Data Schemas
 
-## Serviços
+### Client Registration Base (base_cadastral)
 
-O projeto consiste nos seguintes serviços:
-
-1. pgAdmin - Interface gráfica para administração do PostgreSQL
-2. Postgres - Banco de dados PostgreSQL
-3. Postgres Metabase - Banco de dados PostgreSQL para o Metabase
-4. Metabase - Aplicação para visualização e análise de dados
-
-## Configuração
-
-1. Clone este repositório.
-2. Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
-3. Navegue até a pasta do projeto.
-
-## Execução
-
-1. Abra um terminal na pasta do projeto e torne o script `run.sh` executável com o seguinte comando:
-
-```
-chmod +x run.sh
+```SQL
+|------------------|-----------------------|-----------------|
+| Field            | Type                  | Constraints     |
+|------------------|-----------------------|-----------------|
+| ID_CLIENTE       | INT                   | PRIMARY KEY     |
+| DATA_CADASTRO    | DATE                  | NOT NULL        |
+| DDD              | VARCHAR(3)            | NOT NULL        |
+| FLAG_PF          | CHAR(1)               | NOT NULL        |
+| SEGMENTO_INDUSTRIAL| VARCHAR(255)        | NULL            |
+| DOMINIO_EMAIL    | VARCHAR(255)          | NOT NULL        |
+| PORTE            | VARCHAR(255)          | NULL            |
+| CEP_2_DIG        | VARCHAR(2)            | NOT NULL        |
+|------------------|-----------------------|-----------------|
 ```
 
-2. Execute o script `run.sh` com o seguinte comando:
+### Client Information Base (base_info)
 
-```
-./run.sh
-```
-
-3. Aguarde alguns minutos para que os serviços sejam inicializados e o backup do Metabase seja restaurado.
-
-## Acesso
-
-1. Acesse o Metabase no navegador através do seguinte endereço: http://localhost:3000
-2. Faça login com as seguintes credenciais:
-   - E-mail: victor@nelogica.com
-   - Senha: nelogica1234
-3. Após o login, vá para a página de marcadores e clique no dashboard chamado "Case Nelogica - Victor Martins" para visualizar os dados.
-
-## Outros serviços
-
-- pgAdmin: Acesse o pgAdmin no navegador através do seguinte endereço: http://localhost:5050
-  - E-mail: victor@nelogica.com
-  - Senha: nelogica1234
-
-## Parar os serviços
-
-Para parar os serviços e remover os containers, execute o seguinte comando no terminal:
-
-```
-docker-compose down
+```SQL
+|------------------|-----------------------|-----------------|
+| Field            | Type                  | Constraints     |
+|------------------|-----------------------|-----------------|
+| ID_CLIENTE       | INT                   | PRIMARY KEY,    |
+|                  |                       | FOREIGN KEY     |
+|                  |                       | REFERENCES      |
+|                  |                       | base_cadastral(ID_CLIENTE)|
+| SAFRA_REF        | DATE                  | PRIMARY KEY     |
+| RENDA_MES_ANTERIOR| DECIMAL(15,2)        | NULL            |
+| NO_FUNCIONARIOS  | INT                   | NULL            |
+|------------------|-----------------------|-----------------|
 ```
 
-## Suporte
+### Payments Base (base_pagamentos)
 
-Em caso de problemas ou dúvidas, entre em contato com o autor do projeto através do e-mail: victorfm185@gmail.com# datarisk
+```SQL
+|----------------------|-----------------------|-----------------|
+| Field                | Type                  | Constraints     |
+|----------------------|-----------------------|-----------------|
+| ID_CLIENTE           | INT                   | FOREIGN KEY     |
+|                      |                       | REFERENCES      |
+|                      |                       | base_info(ID_CLIENTE)|
+| SAFRA_REF            | DATE                  | FOREIGN KEY     |
+|                      |                       | REFERENCES      |
+|                      |                       | base_info(SAFRA_REF)|
+| DATA_EMISSAO_DOCUMENTO| DATE                 | NOT NULL        |
+| DATA_VENCIMENTO      | DATE                  | NOT NULL        |
+| VALOR_A_PAGAR        | DECIMAL(15,2)         | NOT NULL        |
+| TAXA                 | DECIMAL(5,2)          | NOT NULL        |
+| DATA_PAGAMENTO       | DATE                  | NULL            |
+|----------------------|-----------------------|-----------------|
+```
+
+## Data Description
+
+The model leverages data from three databases, each detailed below:
+
+### Client Registration Base (base_cadastral.csv)
+
+A database storing immutable registration information about the clients. Each client has a unique identifier and their data does not change over time.
+
+### Client Information Base (base_info.csv)
+
+This database contains dynamic information about the clients, updated monthly. Each client will appear only once per reference month. The unique identifier for each entry is the combination of the client's ID and the reference month.
+
+### Payments Base (base_pagamentos)
+
+Two files, 'base_pagamentos_desenvolvimento.csv' for model development and 'base_pagamentos_teste.csv' for internal validation, constitute this database. It contains transaction history for the clients, and a client may have multiple transactions over the same period.
+
+## Objective
+
+The model's goal is to calculate the probability of a client defaulting on a given transaction. A default is defined as a loan repayment that is late by more than five days. 
+
+For testing, 'base_pagamentos_test.csv' is provided. The final output of the model is a table containing the fields ID_CLIENTE, SAFRA_REF, and DEFAULT, where DEFAULT is the calculated probability of client default.
+
+## Support
+
+If you encounter any issues, have questions, or want to offer suggestions, please contact the project author via email at victorfm185@gmail.com.
